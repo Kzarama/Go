@@ -28,3 +28,17 @@ To create and export one module
 ```bash
 go mod
 ```
+
+---
+
+To access at the memory address
+
+```go
+&x
+```
+
+To access at the value of the memory address
+
+```go
+*x
+```
