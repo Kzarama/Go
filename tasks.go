@@ -82,4 +82,30 @@ func main() {
 	// 	fmt.Println("Index", index, "Task", task.name)
 	// }
 
+	task_map := make(map[string]*taskList)
+
+	task_map["Kevin"] = list
+	fmt.Println("Kevin Task")
+	task_map["Kevin"].print_list()
+
+	t4 := &task{
+		name: "Complete java course",
+		description: "Complete java course this week",
+	}
+
+	t5 := &task{
+		name: "Complete c# course",
+		description: "Complete c# course this week",
+	}
+
+	list2 := &taskList{
+		tasks: []*task{
+			t4, t5,
+		},
+	}
+
+	task_map["Maria"] = list2
+	fmt.Println("Maria Task")
+	task_map["Maria"].print_list()
+
 }
