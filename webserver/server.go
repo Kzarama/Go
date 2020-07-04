@@ -16,6 +16,10 @@ func new_server(port string) *Server {
 	}
 }
 
+func (s *Server) Handle(path string, handler http.HandlerFunc) {
+	s.router.rules[path] = handler
+}
+
 func (s *Server) Listen () error {
 	http.Handle("/", s.router)
 	err := http.ListenAndServe(s.port, nil)
